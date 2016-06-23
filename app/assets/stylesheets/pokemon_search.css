@@ -1,0 +1,21 @@
+.zero{
+  color: #09ff00;
+}
+.quarter{
+  color: #38a926;
+}
+.half{
+  color: #77c975;
+}
+.normal{
+  color: #000;
+}
+.double{
+  color: #d05340;
+}
+.quad{
+  color: #b00b1e;
+}
+.pokemon-image{
+  margin-top: 10px;
+}

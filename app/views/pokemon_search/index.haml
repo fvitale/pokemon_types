@@ -1,0 +1,28 @@
+.container-fuid
+  - if flash[:error]
+    .alert.alert-warning
+      %strong Warning!
+      =flash[:error]
+  .row
+    .col-xs-3
+      %h2="#{@poke.name} ##{@poke.id}"
+    .col-xs-3
+      =image_tag("pokemon_images/"+@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
+  %h3="Type(s): #{@poke.type1} #{@poke.type2}"
+  - @damage.each do |d|
+    - damage_class = case d[:damage]
+      - when "0.0" then "zero"
+      - when "0.25" then "quarter"
+      - when "0.5" then "half"
+      - when "1.0" then "normal"
+      - when "2.0" then "double"
+      - when "4.0" then "quad"
+      - else "unknown"
+    .row
+      .col-xs-3
+        Attack type
+        %strong=d[:attack]
+      .col-xs-3
+        ="generates"
+        %strong{class: damage_class}=d[:damage]
+        =" damage"
