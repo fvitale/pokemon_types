@@ -9,11 +9,10 @@
     .col-xs-3
       = image_tag("pokemon_images/"+@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
     .col-xs-6
-      Search Pokémon:
       = form_tag({controller: "pokemon_search", action: "index"}, method: "get")
-      = text_field(:pokemon, :name)
+      Pick a Pokémon:
+      = select_tag "pokemon[name]", options_for_select(Pokemon.all.collect{|p| [p.name, p.name]}, "name"),{:include_blank => "--Choose one!--"}
       = submit_tag "Catch it!"
-
   %h3="Type(s): #{@poke.type1} #{@poke.type2}"
   .row
     - @damage.each_slice(9) do |sub_damage|
