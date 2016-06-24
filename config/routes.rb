@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'pokemon_search#index'
-  get 'pokemon_search' => 'pokemon_search#index'
+  get 'pokemon_search' => 'pokemon_search#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

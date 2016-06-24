@@ -9,7 +9,7 @@
     .col-xs-3
       = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
     .col-xs-6
-      = form_tag({controller: "pokemon_search", action: "index"}, method: "get")
+      = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
       Pick a Pokémon:
       = select_tag "pokemon[name]", options_for_select(Pokemon.all.collect{|p| [p.name, p.name]}, "name"),{:include_blank => "--Choose one!--"}
       = submit_tag "Catch it!"

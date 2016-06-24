@@ -1,16 +1,22 @@
 class PokemonSearchController < ApplicationController
   def index
+    @poke = Pokemon.first
+    file_name = File.basename(URI.parse(@poke.image).path)[0,3]+".png"
+    @pokemon_image = Rails.application.assets.find_asset("pokemon_images/"+file_name) ? "pokemon_images/"+file_name : @poke.image
+    @damage = damage @poke.type1, @poke.type2
+  end
+
+  def search
     pokemon_name = params[:pokemon][:name] unless (params[:pokemon].nil? || params[:pokemon][:name].nil?)
     @poke = Pokemon.where('lower(name) = ?', pokemon_name.downcase).take if !pokemon_name.nil?
     if !@poke.nil?
       file_name = File.basename(URI.parse(@poke.image).path)[0,3]+".png"
       @pokemon_image = Rails.application.assets.find_asset("pokemon_images/"+file_name) ? "pokemon_images/"+file_name : @poke.image
-    end
-    if @poke.nil?
+      @damage = damage @poke.type1, @poke.type2
+      render :index
+    else @poke.nil?
       flash[:error] = "The pokémon #{pokemon_name} could not be found."
       redirect_to pokemon_search_url(params: {pokemon: {name: Pokemon.first.name}})
-    else
-      @damage = damage @poke.type1, @poke.type2
     end
   end
 
