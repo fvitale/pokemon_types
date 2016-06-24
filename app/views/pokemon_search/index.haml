@@ -7,7 +7,7 @@
     .col-xs-3
       %h2="#{@poke.name} ##{@poke.id}"
     .col-xs-3
-      = image_tag("pokemon_images/"+@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
+      = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
     .col-xs-6
       = form_tag({controller: "pokemon_search", action: "index"}, method: "get")
       Pick a Pokémon:
