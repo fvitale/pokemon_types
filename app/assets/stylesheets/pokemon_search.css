@@ -1,3 +1,6 @@
+.container-fuid, footer {
+  margin: 15px;
+}
 .zero{
   color: #09ff00;
 }
@@ -18,4 +21,10 @@
 }
 .pokemon-image{
   margin-top: 10px;
+}
+.col-xs-6.attack-info .row:nth-child(even) {
+  background-color: #e2978c;
+}
+.col-xs-6.attack-info .row:nth-child(odd) {
+  background-color: #fcc76c;
 }

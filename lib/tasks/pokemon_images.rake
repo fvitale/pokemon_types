@@ -4,7 +4,7 @@ namespace :pokemon_images do
     require "open-uri"
     require "uri"
     Pokemon.all.each do |p|
-      file_name = File.basename(URI.parse(p.image).path)
+      file_name = File.basename(URI.parse(p.image).path)[0,3]+".png"
       path_name = "app/assets/images/pokemon_images/"
       p "Checking #{path_name+file_name}"
       unless File.file?(path_name+file_name)

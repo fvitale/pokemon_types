@@ -1,8 +1,8 @@
 class PokemonSearchController < ApplicationController
   def index
-    pokemon_name = params[:pokemon][:name].titlecase unless (params[:pokemon].nil? || params[:pokemon][:name].nil?)
-    @poke = Pokemon.where(name: pokemon_name).take if !pokemon_name.nil?
-    @pokemon_image = File.basename(URI.parse(@poke.image).path) if !@poke.nil?
+    pokemon_name = params[:pokemon][:name] unless (params[:pokemon].nil? || params[:pokemon][:name].nil?)
+    @poke = Pokemon.where('lower(name) = ?', pokemon_name.downcase).take if !pokemon_name.nil?
+    @pokemon_image = File.basename(URI.parse(@poke.image).path)[0,3]+".png" if !@poke.nil?
     if @poke.nil?
       flash[:error] = "The pokémon #{pokemon_name} could not be found."
       redirect_to pokemon_search_url(params: {pokemon: {name: Pokemon.first.name}})
