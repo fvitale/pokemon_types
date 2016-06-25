@@ -8,12 +8,15 @@
       %h3="#{@poke.name} ##{@poke.id}"
     .col-xs-1
       = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
-    .col-xs-3.search-col
+    .col-xs-3.search-col.input-group
       = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
-      = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path
-      = submit_tag "Catch it!"
-
-  %h5="Type(s): #{@poke.type1} #{@poke.type2}"
+      = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path, class: "form-control search-input", placeholder: "Start typing..."
+      .input-group-btn.search-input#pokemon_name_submit
+        = content_tag :button, "Catch it!", type: "submit", class: "btn btn-default"
+  %h5
+    ="Type(s): "
+    %img{id: @poke.type1}
+    %img{id: @poke.type2}
   .row
     .col-xs-2
     - @damage.sort_by{|hsh|hsh[:damage]}.reverse.each_slice(9) do |sub_damage|
@@ -30,7 +33,7 @@
           .row
             .col-xs-6
               Attack type
-              %strong=d[:attack]
+              %img{id: d[:attack]}
             .col-xs-6.generates-info
               ="generates"
               %strong.generates-value{class: damage_class}=d[:damage]

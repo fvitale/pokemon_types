@@ -53,3 +53,97 @@ footer {
 .col-xs-4.attack-info + .col-xs-4.attack-info {
   border-left: 1px solid #000;
 }
+.search-input#pokemon_name, .search-input#pokemon_name_submit{
+  display: block;
+}
+#bug {
+  background: url("types.png") 1px 0;
+  width: 75px;
+  height: 33px;
+}
+#dark {
+  background: url("types.png") -62px 0;
+  width: 75px;
+  height: 33px;
+}
+#dragon {
+  background: url("types.png") 74px 0;
+  width: 75px;
+  height: 33px;
+}
+#electric {
+  background: url("types.png") 1px -32px;
+  width: 75px;
+  height: 33px;
+}
+#fairy {
+  background: url("types.png") -62px -32px;
+  width: 75px;
+  height: 33px;
+}
+#fighting {
+  background: url("types.png") 74px -32px;
+  width: 75px;
+  height: 33px;
+}
+
+#fire{
+  background: url("types.png") 1px -65px;
+  width: 75px;
+  height: 33px;
+}
+#flying{
+  background: url("types.png") -62px -65px;
+  width: 75px;
+  height: 33px;
+}
+#ghost{
+  background: url("types.png") 74px -65px;
+  width: 75px;
+  height: 33px;
+}
+#grass{
+  background: url("types.png") 1px -99px;
+  width: 75px;
+  height: 33px;
+}
+#ground{
+  background: url("types.png") -62px -99px;
+  width: 75px;
+  height: 33px;
+}
+#ice{
+  background: url("types.png") 74px -99px;
+  width: 75px;
+  height: 33px;
+}
+#normal{
+  background: url("types.png") 1px -132px;
+  width: 75px;
+  height: 33px;
+}
+#poison{
+  background: url("types.png") -62px -132px;
+  width: 75px;
+  height: 33px;
+}
+#psychic{
+  background: url("types.png") 74px -132px;
+  width: 75px;
+  height: 33px;
+}
+#rock{
+  background: url("types.png") 1px -166px;
+  width: 75px;
+  height: 33px;
+}
+#steel{
+  background: url("types.png") -62px -166px;
+  width: 75px;
+  height: 33px;
+}
+#water{
+  background: url("types.png") 74px -166px;
+  width: 75px;
+  height: 33px;
+}
