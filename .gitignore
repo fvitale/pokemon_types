@@ -16,7 +16,4 @@
 !/log/.keep
 /tmp
 
-# Ignore all pokemon images.
-/app/assets/images/pokemon_images/*
-
 .rvmrc
