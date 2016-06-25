@@ -53,3 +53,6 @@ end
 
 # Use HAML not ERB
 gem 'haml', '~> 4.0.3'
+
+gem 'rails4-autocomplete'
+gem 'jquery-ui-rails'

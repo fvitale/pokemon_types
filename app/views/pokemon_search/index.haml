@@ -4,33 +4,34 @@
       %strong Warning!
       =flash[:error]
   .row
-    .col-xs-3
-      %h2="#{@poke.name} ##{@poke.id}"
-    .col-xs-3
+    .col-xs-2
+      %h3="#{@poke.name} ##{@poke.id}"
+    .col-xs-1
       = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
-    .col-xs-6
+    .col-xs-3.search-col
       = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
-      Pick a Pokémon:
-      = select_tag "pokemon[name]", options_for_select(Pokemon.all.collect{|p| [p.name, p.name]}, "name"),{:include_blank => "--Choose one!--"}
+      = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path
       = submit_tag "Catch it!"
-  %h3="Type(s): #{@poke.type1} #{@poke.type2}"
+
+  %h5="Type(s): #{@poke.type1} #{@poke.type2}"
   .row
-    - @damage.each_slice(9) do |sub_damage|
-      .col-xs-6.attack-info
+    .col-xs-2
+    - @damage.sort_by{|hsh|hsh[:damage]}.reverse.each_slice(9) do |sub_damage|
+      .col-xs-4.attack-info
         - sub_damage.each do |d|
           - damage_class = case d[:damage]
-            - when "0.0" then "zero"
+            - when "0.00" then "zero"
             - when "0.25" then "quarter"
-            - when "0.5" then "half"
-            - when "1.0" then "normal"
-            - when "2.0" then "double"
-            - when "4.0" then "quad"
+            - when "0.50" then "half"
+            - when "1.00" then "normal"
+            - when "2.00" then "double"
+            - when "4.00" then "quad"
             - else "unknown"
           .row
             .col-xs-6
               Attack type
               %strong=d[:attack]
-            .col-xs-6
+            .col-xs-6.generates-info
               ="generates"
-              %strong{class: damage_class}=d[:damage]
+              %strong.generates-value{class: damage_class}=d[:damage]
               =" damage"

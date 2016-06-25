@@ -1,6 +1,12 @@
 .container-fuid, footer {
   margin: 15px;
 }
+.generates-info {
+  text-align: right;
+}
+.generates-value {
+  background-color: #FFF;
+}
 .zero{
   color: #09ff00;
 }
@@ -22,9 +28,28 @@
 .pokemon-image{
   margin-top: 10px;
 }
-.col-xs-6.attack-info .row:nth-child(even) {
+.col-xs-4.attack-info .row:nth-child(even) {
   background-color: #e2978c;
 }
-.col-xs-6.attack-info .row:nth-child(odd) {
+.col-xs-4.attack-info .row:nth-child(odd) {
   background-color: #fcc76c;
+}
+li.ui-state-focus {
+  background-color: #96A8CD;
+}
+ul.ui-menu {
+  background-color: #FFF;
+  width: 200px;
+}
+.ui-helper-hidden-accessible {
+  display: none;
+}
+.search-col {
+  padding-top: 25px;
+}
+footer {
+  text-align: center;
+}
+.col-xs-4.attack-info + .col-xs-4.attack-info {
+  border-left: 1px solid #000;
 }

@@ -1,4 +1,5 @@
 class PokemonSearchController < ApplicationController
+  autocomplete :pokemon, :name
   def index
     @poke = Pokemon.first
     file_name = File.basename(URI.parse(@poke.image).path)[0,3]+".png"
@@ -26,7 +27,7 @@ class PokemonSearchController < ApplicationController
     Type.all.each do |type|
       damage1 = my_type1.nil? ? 1 : type[my_type1.to_sym]
       damage2 = my_type2.nil? ? 1 : type[my_type2.to_sym]
-      result_damage = damage1*damage2
+      result_damage = sprintf "%.2f", (damage1*damage2)
       results << {attack: type.attack.to_s, damage: result_damage.to_s}
     end
     results
