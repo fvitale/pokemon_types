@@ -1,5 +1,8 @@
 body {
   background-color: #dedede !important;
+  width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 .container-fuid, footer {
   margin: 15px;
