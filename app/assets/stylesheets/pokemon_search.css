@@ -1,38 +1,18 @@
+body {
+  background-color: #dedede !important;
+}
 .container-fuid, footer {
   margin: 15px;
+  padding: 15px;
+  width: 90%;
 }
-.generates-info {
-  text-align: right;
+.col-xs-4 h3 {
+  text-align: center;
 }
-.generates-value {
-  background-color: #FFF;
-}
-.zero{
-  color: #09ff00;
-}
-.quarter{
-  color: #38a926;
-}
-.half{
-  color: #77c975;
-}
-.normal{
-  color: #000;
-}
-.double{
-  color: #d05340;
-}
-.quad{
-  color: #b00b1e;
-}
-.pokemon-image{
+.pokemon-image {
   margin-top: 10px;
-}
-.col-xs-4.attack-info .row:nth-child(even) {
-  background-color: #e2978c;
-}
-.col-xs-4.attack-info .row:nth-child(odd) {
-  background-color: #fcc76c;
+  display: block;
+  margin: auto;
 }
 li.ui-state-focus {
   background-color: #96A8CD;
@@ -50,100 +30,112 @@ ul.ui-menu {
 footer {
   text-align: center;
 }
-.col-xs-4.attack-info + .col-xs-4.attack-info {
-  border-left: 1px solid #000;
-}
 .search-input#pokemon_name, .search-input#pokemon_name_submit{
   display: block;
+  margin-bottom: 20px;
+}
+.search-input#pokemon_name {
+  width:  calc(100% - 76px);
+}
+span.image {
+  display: inline-block;
+  width: 74px;
+  height: 34px;
 }
 #bug {
   background: url("types.png") 1px 0;
-  width: 75px;
-  height: 33px;
 }
 #dark {
   background: url("types.png") -62px 0;
-  width: 75px;
-  height: 33px;
 }
 #dragon {
   background: url("types.png") 74px 0;
-  width: 75px;
-  height: 33px;
 }
 #electric {
   background: url("types.png") 1px -32px;
-  width: 75px;
-  height: 33px;
 }
 #fairy {
   background: url("types.png") -62px -32px;
-  width: 75px;
-  height: 33px;
 }
 #fighting {
   background: url("types.png") 74px -32px;
-  width: 75px;
-  height: 33px;
 }
 
 #fire{
   background: url("types.png") 1px -65px;
-  width: 75px;
-  height: 33px;
 }
 #flying{
   background: url("types.png") -62px -65px;
-  width: 75px;
-  height: 33px;
 }
 #ghost{
   background: url("types.png") 74px -65px;
-  width: 75px;
-  height: 33px;
 }
 #grass{
   background: url("types.png") 1px -99px;
-  width: 75px;
-  height: 33px;
 }
 #ground{
   background: url("types.png") -62px -99px;
-  width: 75px;
-  height: 33px;
 }
 #ice{
   background: url("types.png") 74px -99px;
-  width: 75px;
-  height: 33px;
 }
 #normal{
   background: url("types.png") 1px -132px;
-  width: 75px;
-  height: 33px;
 }
 #poison{
   background: url("types.png") -62px -132px;
-  width: 75px;
-  height: 33px;
 }
 #psychic{
   background: url("types.png") 74px -132px;
-  width: 75px;
-  height: 33px;
 }
 #rock{
   background: url("types.png") 1px -166px;
-  width: 75px;
-  height: 33px;
 }
 #steel{
   background: url("types.png") -62px -166px;
-  width: 75px;
-  height: 33px;
 }
 #water{
   background: url("types.png") 74px -166px;
-  width: 75px;
-  height: 33px;
+}
+span.image.alert-success-0-multi{
+  background: url("0.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+}
+span.image.alert-info-25-multi{
+  background: url("25.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+}
+span.image.alert-info-50-multi{
+  background: url("50.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+}
+span.image.alert-warning-1-multi{
+  background: url("1.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+}
+span.image.alert-danger-2-multi{
+  background: url("2.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+}
+span.image.alert-danger-4-multi{
+  background: url("4.png");
+  background-repeat: no-repeat;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
 }

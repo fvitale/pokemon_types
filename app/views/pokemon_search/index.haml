@@ -4,37 +4,30 @@
       %strong Warning!
       =flash[:error]
   .row
-    .col-xs-2
+    .col-xs-4
       %h3="#{@poke.name} ##{@poke.id}"
-    .col-xs-1
-      = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}")
-    .col-xs-3.search-col.input-group
+    .col-xs-4
+      = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}", class: "pokemon-image")
+    .col-xs-4
+      .row
+        %span{class: "image", id: @poke.type1}
+      .row
+        %span{class: "image", id: @poke.type2}
+  .row
+    .col-xs-12.search-col.input-group
       = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
       = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path, class: "form-control search-input", placeholder: "Start typing..."
       .input-group-btn.search-input#pokemon_name_submit
         = content_tag :button, "Catch it!", type: "submit", class: "btn btn-default"
-  %h5
-    ="Type(s): "
-    %img{id: @poke.type1}
-    %img{id: @poke.type2}
-  .row
-    .col-xs-2
-    - @damage.sort_by{|hsh|hsh[:damage]}.reverse.each_slice(9) do |sub_damage|
-      .col-xs-4.attack-info
-        - sub_damage.each do |d|
-          - damage_class = case d[:damage]
-            - when "0.00" then "zero"
-            - when "0.25" then "quarter"
-            - when "0.50" then "half"
-            - when "1.00" then "normal"
-            - when "2.00" then "double"
-            - when "4.00" then "quad"
-            - else "unknown"
-          .row
-            .col-xs-6
-              Attack type
-              %img{id: d[:attack]}
-            .col-xs-6.generates-info
-              ="generates"
-              %strong.generates-value{class: damage_class}=d[:damage]
-              =" damage"
+  - @damage.sort_by{|hsh|hsh[:damage]}.reverse.each do |d|
+    - damage_class = case d[:damage]
+      - when "0.00" then "alert-success alert-success-0"
+      - when "0.25" then "alert-info alert-info-25"
+      - when "0.50" then "alert-info alert-info-50"
+      - when "1.00" then "alert-warning alert-warning-1"
+      - when "2.00" then "alert-danger alert-danger-2"
+      - when "4.00" then "alert-danger alert-danger-4"
+      - else "alert-warning"
+    .alert{class: damage_class, role: "alert"}
+      %span{class: "image", id: d[:attack]}
+      %span{class: "image #{damage_class}-multi"}
