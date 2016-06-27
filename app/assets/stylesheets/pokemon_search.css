@@ -1,8 +1,10 @@
 body {
   background-color: #dedede !important;
-  width: 50%;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+h3.pokemon-name {
+  text-align: center;
 }
 .container-fuid, footer {
   margin: 15px;
@@ -42,103 +44,113 @@ footer {
 }
 span.image {
   display: inline-block;
-  width: 74px;
-  height: 34px;
+  width: 261px;
+  height: 99px;
 }
 #bug {
-  background: url("types.png") 1px 0;
+  background: url("types.png") -46px -34px;
 }
 #dark {
-  background: url("types.png") -62px 0;
+  background: url("types.png") -369px -34px;
 }
 #dragon {
-  background: url("types.png") 74px 0;
+  background: url("types.png") -688px -34px;
 }
 #electric {
-  background: url("types.png") 1px -32px;
+  background: url("types.png") -45px -196px;
 }
 #fairy {
-  background: url("types.png") -62px -32px;
+  background: url("types.png") -368px -196px;
 }
 #fighting {
-  background: url("types.png") 74px -32px;
+  background: url("types.png") -692px -196px;
 }
-
 #fire{
-  background: url("types.png") 1px -65px;
+  background: url("types.png") -45px -361px;
 }
 #flying{
-  background: url("types.png") -62px -65px;
+  background: url("types.png") -368px -361px;
 }
 #ghost{
-  background: url("types.png") 74px -65px;
+  background: url("types.png") -692px -361px;
 }
 #grass{
-  background: url("types.png") 1px -99px;
+  background: url("types.png") -46px -529px;
 }
 #ground{
-  background: url("types.png") -62px -99px;
+  background: url("types.png") -368px -529px;
 }
 #ice{
-  background: url("types.png") 74px -99px;
+  background: url("types.png") -692px -529px;
 }
 #normal{
-  background: url("types.png") 1px -132px;
+  background: url("types.png") -45px -696px;
 }
 #poison{
-  background: url("types.png") -62px -132px;
+  background: url("types.png") -368px -695px;
 }
 #psychic{
-  background: url("types.png") 74px -132px;
+  background: url("types.png") 308px -696px;
 }
 #rock{
-  background: url("types.png") 1px -166px;
+  background: url("types.png") -44px -864px;
 }
 #steel{
-  background: url("types.png") -62px -166px;
+  background: url("types.png") -368px -864px  ;
 }
 #water{
-  background: url("types.png") 74px -166px;
+  background: url("types.png") -692px -864px;
 }
 span.image.alert-success-0-multi{
   background: url("0.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
 }
 span.image.alert-info-25-multi{
   background: url("25.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
 }
 span.image.alert-info-50-multi{
   background: url("50.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
 }
 span.image.alert-warning-1-multi{
   background: url("1.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
 }
 span.image.alert-danger-2-multi{
   background: url("2.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
 }
 span.image.alert-danger-4-multi{
   background: url("4.png");
   background-repeat: no-repeat;
-  height: 25px;
+  height: 74px;
+  width: 153px;
   float: right;
   margin-top: 10px;
+}
+
+.alert-success-0, .alert-info-25, .alert-info-50, .alert-warning-1,
+.alert-danger-2, .alert-danger-4, .alert-warning {
+  height: 131px;
 }

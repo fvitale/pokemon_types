@@ -4,11 +4,12 @@
       %strong Warning!
       =flash[:error]
   .row
-    .col-xs-4
-      %h3="#{@poke.name} ##{@poke.id}"
-    .col-xs-4
-      = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}", class: "pokemon-image")
-    .col-xs-4
+    .col-xs-6
+      .row
+        %h3.pokemon-name="#{@poke.name} ##{@poke.id}"
+      .row
+        = image_tag(@pokemon_image, size: "66x66", alt: "pokemon-image-#{@poke.id}", class: "pokemon-image")
+    .col-xs-6
       .row
         %span{class: "image", id: @poke.type1}
       .row
