@@ -29,6 +29,10 @@ ul.ui-menu {
   background-color: #FFF;
   width: 200px;
 }
+ul.ui-menu li {
+  font-size: 22px;
+  list-style-image: url('li_item.png');
+}
 .ui-helper-hidden-accessible {
   display: none;
 }
@@ -41,126 +45,11 @@ footer {
 .search-input#pokemon_name, .search-input#pokemon_name_submit{
   display: block;
   margin-bottom: 20px;
+  font-size: 22px;
 }
 .search-input#pokemon_name {
   width:  calc(100% - 76px);
 }
-/*
-span.image {
-  display: inline-block;
-  width: 261px;
-  height: 99px;
-}
-#bug {
-  background: url("types.png") -46px -34px;
-}
-#dark {
-  background: url("types.png") -369px -34px;
-}
-#dragon {
-  background: url("types.png") -688px -34px;
-}
-#electric {
-  background: url("types.png") -45px -196px;
-}
-#fairy {
-  background: url("types.png") -368px -196px;
-}
-#fighting {
-  background: url("types.png") -692px -196px;
-}
-#fire{
-  background: url("types.png") -45px -361px;
-}
-#flying{
-  background: url("types.png") -368px -361px;
-}
-#ghost{
-  background: url("types.png") -692px -361px;
-}
-#grass{
-  background: url("types.png") -46px -529px;
-}
-#ground{
-  background: url("types.png") -368px -529px;
-}
-#ice{
-  background: url("types.png") -692px -529px;
-}
-#normal{
-  background: url("types.png") -45px -696px;
-}
-#poison{
-  background: url("types.png") -368px -695px;
-}
-#psychic{
-  background: url("types.png") 308px -696px;
-}
-#rock{
-  background: url("types.png") -44px -864px;
-}
-#steel{
-  background: url("types.png") -368px -864px  ;
-}
-#water{
-  background: url("types.png") -692px -864px;
-}
-
-span.image.alert-success-0-multi{
-  background: url("0.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-span.image.alert-info-25-multi{
-  background: url("25.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-span.image.alert-info-50-multi{
-  background: url("50.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-span.image.alert-warning-1-multi{
-  background: url("1.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-span.image.alert-danger-2-multi{
-  background: url("2.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-span.image.alert-danger-4-multi{
-  background: url("4.png");
-  background-repeat: no-repeat;
-  height: 74px;
-  width: 153px;
-  float: right;
-  margin-top: 10px;
-}
-.alert-success-0, .alert-info-25, .alert-info-50, .alert-warning-1,
-.alert-danger-2, .alert-danger-4, .alert-warning {
-  height: 131px;
-}
-*/
-
-/*small*/
 span.image {
   display: inline-block;
   width: 131px;
