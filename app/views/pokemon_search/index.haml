@@ -15,11 +15,13 @@
       .row
         %span{class: "image", id: @poke.type2}
   .row
-    .col-xs-12.search-col.input-group
+    .col-xs-2
+    .col-xs-8.search-col.input-group
       = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
       = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path, class: "form-control search-input", placeholder: "Start typing..."
       .input-group-btn.search-input#pokemon_name_submit
         = content_tag :button, "Catch it!", type: "submit", class: "btn btn-default"
+    .col-xs-2
   - @damage.sort_by{|hsh|hsh[:damage]}.reverse.each do |d|
     - damage_class = case d[:damage]
       - when "0.00" then "alert-success alert-success-0"
@@ -29,6 +31,10 @@
       - when "2.00" then "alert-danger alert-danger-2"
       - when "4.00" then "alert-danger alert-danger-4"
       - else "alert-warning"
-    .alert{class: damage_class, role: "alert"}
-      %span{class: "image", id: d[:attack]}
-      %span{class: "image #{damage_class}-multi"}
+    .row
+      .col-xs-2
+      .col-xs-8
+        .alert{class: damage_class, role: "alert"}
+          %span{class: "image", id: d[:attack]}
+          %span{class: "image #{damage_class}-multi"}
+      .col-xs-2

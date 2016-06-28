@@ -42,6 +42,7 @@ footer {
 .search-input#pokemon_name {
   width:  calc(100% - 76px);
 }
+/*
 span.image {
   display: inline-block;
   width: 261px;
@@ -101,6 +102,7 @@ span.image {
 #water{
   background: url("types.png") -692px -864px;
 }
+
 span.image.alert-success-0-multi{
   background: url("0.png");
   background-repeat: no-repeat;
@@ -149,8 +151,111 @@ span.image.alert-danger-4-multi{
   float: right;
   margin-top: 10px;
 }
-
 .alert-success-0, .alert-info-25, .alert-info-50, .alert-warning-1,
 .alert-danger-2, .alert-danger-4, .alert-warning {
   height: 131px;
+}
+*/
+
+/*small*/
+span.image {
+  display: inline-block;
+  width: 131px;
+  height: 50px;
+}
+#bug {
+  background: url("types_small.png") -23px -17px;
+}
+#dark {
+  background: url("types_small.png") -184px -17px;
+}
+#dragon {
+  background: url("types_small.png") -344px -16px;
+}
+#electric {
+  background: url("types_small.png") -23px -98px;
+}
+#fairy {
+  background: url("types_small.png") -184px -98px;
+}
+#fighting {
+  background: url("types_small.png") -346px -98px;
+}
+#fire{
+  background: url("types_small.png") -22px -180px;
+}
+#flying{
+  background: url("types_small.png") -184px -180px;
+}
+#ghost{
+  background: url("types_small.png") -346px -180px;
+}
+#grass{
+  background: url("types_small.png") -23px -264px;
+}
+#ground{
+  background: url("types_small.png") -184px -264px;
+}
+#ice{
+  background: url("types_small.png") -346px -264px;
+}
+#normal{
+  background: url("types_small.png") -23px -348px;
+}
+#poison{
+  background: url("types_small.png") -184px -347px;
+}
+#psychic{
+  background: url("types_small.png") -346px -348px;
+}
+#rock{
+  background: url("types_small.png") -22px -431px;
+}
+#steel{
+  background: url("types_small.png") -184px -431px;
+}
+#water{
+  background: url("types_small.png") -346px -431px;
+}
+span.image.alert-success-0-multi{
+  background: url("0_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: right;
+}
+span.image.alert-info-25-multi{
+  background: url("25_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: right;
+}
+span.image.alert-info-50-multi{
+  background: url("50_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: right;
+}
+span.image.alert-warning-1-multi{
+  background: url("1_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: right;
+}
+span.image.alert-danger-2-multi{
+  background: url("2_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: right;
+}
+span.image.alert-danger-4-multi{
+  background: url("4_small.png");
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  width: 85px;
+  float: riht;
 }
