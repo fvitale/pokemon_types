@@ -16,7 +16,7 @@
         %span{class: "image", id: @poke.type2}
   .row
     .col-xs-2
-    .col-xs-8.search-col.input-group
+    .col-xs-8.search-col.input-group.pokemon-search
       = form_tag({controller: "pokemon_search", action: "search"}, method: "get")
       = autocomplete_field_tag 'pokemon[name]', '', autocomplete_pokemon_name_pokemon_search_index_path, class: "form-control search-input", placeholder: "Start typing..."
       .input-group-btn.search-input#pokemon_name_submit

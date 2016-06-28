@@ -11,6 +11,9 @@ h3.pokemon-name {
   padding: 15px;
   width: 90%;
 }
+.pokemon-search input#pokemon_name,.pokemon-search button {
+  height: 60px;
+}
 .col-xs-4 h3 {
   text-align: center;
 }
@@ -221,41 +224,53 @@ span.image.alert-success-0-multi{
   background: url("0_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
+  width: 81px;
+  height: 41px;
+  border: 2px inset grey;
   float: right;
 }
 span.image.alert-info-25-multi{
   background: url("25_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
+  width: 81px;
+  height: 41px;
+  border: 2px inset green;
   float: right;
 }
 span.image.alert-info-50-multi{
   background: url("50_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
+  width: 81px;
+  height: 41px;
+  border: 2px inset green;
   float: right;
 }
 span.image.alert-warning-1-multi{
   background: url("1_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
+  width: 81px;
+  height: 41px;
+  border: 2px inset black;
   float: right;
 }
 span.image.alert-danger-2-multi{
   background: url("2_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
+  width: 81px;
+  height: 41px;
+  border: 2px inset red;
   float: right;
 }
 span.image.alert-danger-4-multi{
   background: url("4_small.png");
   background-repeat: no-repeat;
   margin-top: 10px;
-  width: 85px;
-  float: riht;
+  width: 81px;
+  height: 41px;
+  border: 2px inset red;
+  float: right;
 }
