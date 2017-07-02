@@ -1,6 +1,6 @@
 == README
 
-Pokémon Types
+Pokémon Types https://pokemontypes.herokuapp.com/
 
 This helps me beat japanese crazy pokémon players online.
 
@@ -9,7 +9,5 @@ A simple app that lets you find weaknesses of any of the existing pokémon.
 * Uses ruby 2.1.2
 
 * Run migrations, and rake db:seed, to have the db ready to go!
-
-* Images won't be shown until you run the rake task pokemon_images:get_pokemon_images
 
 Pokémon is property of Nintendo. This is not an official Pokémon product, nor is this endorsed or sponsored by Nintendo in any way. Just needed to have this to defeat my friends :P
