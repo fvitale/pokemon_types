@@ -1,0 +1,14 @@
+- @damage["#{tab_id}"].sort_by{|hsh|hsh[:damage]}.reverse.each do |d|
+  - damage_class = case d[:damage]
+    - when "0.00" then "alert-success alert-success-0"
+    - when "0.25" then "alert-info alert-info-25"
+    - when "0.50" then "alert-info alert-info-50"
+    - when "1.00" then "alert-warning alert-warning-1"
+    - when "2.00" then "alert-danger alert-danger-2"
+    - when "4.00" then "alert-danger alert-danger-4"
+    - else "alert-warning"
+  .row
+    .col-xs-12
+      .alert.damage{class: damage_class, role: "alert"}
+        %span{class: "image", id: d[:attack]}
+        %span{class: "image #{damage_class}-multi"}
