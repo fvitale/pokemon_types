@@ -1,0 +1,19 @@
+.tab-pane{id: "#{tab_id}", class: "#{active}"}
+  .row
+    .col-xs-6
+      %h3.pokemon-name="#{@poke.name} ##{@poke.national_id}"
+    .col-xs-6
+      - pokemon_image = "sprites/"+zero_adder(@poke.national_id)+image_suffix.to_s+".png"
+      = image_tag(pokemon_image, size: "66x66", alt: pokemon_image, class: "pokemon-image")
+  %hr
+  .row
+    .col-xs-2
+    .col-xs-2
+      %h4 Types:
+    - types.each do |type|
+      .col-xs-2
+        %span{class: "image", id: type.downcase}
+  %hr
+  .row
+    %h4 Weaknesses:
+    = render 'damage_calcs', tab_id: tab_id

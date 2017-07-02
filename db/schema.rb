@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160623213031) do
-
-  create_table "pokemon", force: :cascade do |t|
-    t.string "name",  null: false
-    t.string "type1", null: false
-    t.string "type2"
-    t.string "image"
-  end
+ActiveRecord::Schema.define(version: 20170702213943) do
 
   create_table "types", force: :cascade do |t|
     t.string  "attack"

@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :pokemon_search do
     get :autocomplete_pokemon_name, :on => :collection
   end
+  get 'pokemon_names' => 'pokemon_search#names'
 end
