@@ -2,6 +2,9 @@
 
 Pokémon Types https://pokemontypes.herokuapp.com/
 
+Credits for provinding backend info to:
+https://github.com/jalyna/oakdex-pokedex
+
 This helps me beat japanese crazy pokémon players online.
 
 A simple app that lets you find weaknesses of any of the existing pokémon.
