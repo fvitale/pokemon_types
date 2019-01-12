@@ -1,4 +1,4 @@
-- @damage["#{tab_id}"].sort_by{|hsh|hsh[:damage]}.reverse.each do |d|
+- @damage["#{tab_id}"].sort_by{|hsh|hsh[:damage]}.reverse.uniq.each do |d|
   - damage_class = case d[:damage]
     - when "0.00" then "alert-success alert-success-0"
     - when "0.25" then "alert-info alert-info-25"
