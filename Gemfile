@@ -7,6 +7,9 @@ gem 'turbolinks'
 gem 'haml', '~> 4.0.3'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
+gem 'coffee-rails'
+gem 'oakdex-pokedex'
+gem 'sprockets', '~>3.7.2'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
@@ -20,4 +23,3 @@ group :production do
   gem 'unicorn'
   gem 'rails_12factor'
 end
-gem 'oakdex-pokedex'
