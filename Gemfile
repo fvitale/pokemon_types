@@ -7,7 +7,6 @@ gem 'turbolinks'
 gem 'haml', '~> 4.0.3'
 gem 'rails4-autocomplete'
 gem 'jquery-ui-rails'
-gem 'coffee-rails'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
